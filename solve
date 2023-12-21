@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+DAY="$1"
+PART="$2"
+
+SCRIPT_DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
+
+if [[ -z "$PART" ]]; then
+  poetry run python "${SCRIPT_DIR}/solutions/${DAY}/1.py"
+  poetry run python "${SCRIPT_DIR}/solutions/${PART}/2.py"
+else
+  poetry run python "${SCRIPT_DIR}/solutions/${DAY}/${PART}.py"
+fi
