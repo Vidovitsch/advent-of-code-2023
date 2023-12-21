@@ -23,6 +23,6 @@ def solve(input: PuzzleInput) -> int:
 
 if __name__ == '__main__':
   (Puzzle('Day 1: Trebuchet?! (part 1)', CURRENT / 'input.txt')
-    .add_test({ 'input_path': CURRENT / 'test.txt', 'expected_result': 142 })
+    .add_test({ 'input_path': CURRENT / 'test_1.txt', 'expected_result': 142 })
     .add_test({ 'input_path': CURRENT / 'input.txt', 'expected_result': 54951 })
     .solve(solve))
