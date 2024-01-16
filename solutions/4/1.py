@@ -29,7 +29,7 @@ def process_input(input: List[str]) -> PuzzleInput:
 def solve(scratchcards: PuzzleInput) -> int:
   total = 0
 
-  for card_nr, card in enumerate(scratchcards):
+  for card in scratchcards:
     counter = Counter(card[0] + card[1])
     total += math.floor(2 ** (sum(counter.values()) - len(counter.keys()) - 1))
 
