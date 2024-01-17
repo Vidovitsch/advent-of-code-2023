@@ -1,6 +1,5 @@
 from collections import Counter
 import pathlib
-import re
 from typing import List
 
 from advent_helper.decorators import process_puzzle_input
