@@ -20,10 +20,10 @@ def find_extrapolation(sequence: List[int]) -> int:
     return 0
 
   next_sequence = [num2 - num1 for num1, num2 in zip(sequence, sequence[1:])]
-  return sequence[-1] + find_extrapolation(next_sequence)
+  return sequence[0] - find_extrapolation(next_sequence)
 
 if __name__ == '__main__':
-  (Puzzle('Day 9: Mirage Maintenance (part 1)', CURRENT / 'input.txt')
-    .add_test({ 'input_path': CURRENT / 'test_1.txt', 'expected_result': 114 })
-    .add_test({ 'input_path': CURRENT / 'input.txt', 'expected_result': 1969958987 })
+  (Puzzle('Day 9: Mirage Maintenance (part 2)', CURRENT / 'input.txt')
+    .add_test({ 'input_path': CURRENT / 'test_1.txt', 'expected_result': 2 })
+    .add_test({ 'input_path': CURRENT / 'input.txt', 'expected_result': 1068 })
     .solve(solve))
